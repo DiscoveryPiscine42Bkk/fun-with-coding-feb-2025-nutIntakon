@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  
+  .parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+  }
+  
+  .parallax1 {
+    background-image: url('https://img.freepik.com/free-photo/cute-rat-living-outdoors_23-2150702687.jpg?semt=ais_hybrid');
+  }
+  
+  .parallax2 {
+    background-image: url('https://imgcdn.stablediffusionweb.com/2024/11/9/b77a8da8-19f8-4c65-bf9f-bc172f902a29.jpg');
+  }
+  
+  .message {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+  
+  .content-block {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
