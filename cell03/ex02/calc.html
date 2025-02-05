@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+    <input type="text" id="leftOperand" placeholder="Left operand">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightOperand" placeholder="Right operand">
+    <input type="button" value="Try me!" onclick="calculate()">
+
+    <script>
+        function calculate() {
+            const leftOperand = parseInt(document.getElementById('leftOperand').value);
+            const rightOperand = parseInt(document.getElementById('rightOperand').value);
+            const operator = document.getElementById('operator').value;
+
+            if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
+                alert('Error :(');
+                return;
+            }
+
+            let result;
+            if (operator === '+') {
+                result = leftOperand + rightOperand;
+            } else if (operator === '-') {
+                result = leftOperand - rightOperand;
+            } else if (operator === '*') {
+                result = leftOperand * rightOperand;
+            } else if (operator === '/') {
+                if (rightOperand === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+                result = leftOperand / rightOperand;
+            } else if (operator === '%') {
+                if (rightOperand === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+                result = leftOperand % rightOperand;
+            }
+
+            alert('Result: ' + result);
+            console.log('Result: ' + result);
+        }
+
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+</html>
