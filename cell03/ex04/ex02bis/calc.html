@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="leftOperand" placeholder="Left operand">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightOperand" placeholder="Right operand">
+    <input type="button" value="Try me!" id="calculateButton">
+
+    <script>
+        $(document).ready(function() {
+            $('#calculateButton').click(function() {
+                var leftOperand = parseFloat($('#leftOperand').val());
+                var rightOperand = parseFloat($('#rightOperand').val());
+                var operator = $('#operator').val();
+
+                if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
+                    alert('Error :(');
+                    return;
+                }
+
+                var result;
+                switch(operator) {
+                    case '+':
+                        result = leftOperand + rightOperand;
+                        break;
+                    case '-':
+                        result = leftOperand - rightOperand;
+                        break;
+                    case '*':
+                        result = leftOperand * rightOperand;
+                        break;
+                    case '/':
+                        if (rightOperand === 0) {
+                            alert("It’s over 9000!");
+                            return;
+                        }
+                        result = leftOperand / rightOperand;
+                        break;
+                    case '%':
+                        if (rightOperand === 0) {
+                            alert("It’s over 9000!");
+                            return;
+                        }
+                        result = leftOperand % rightOperand;
+                        break;
+                    default:
+                        result = 0;
+                        break;
+                }
+
+                alert('Result: ' + result);
+                console.log('Result: ' + result);
+            });
+
+            setInterval(function() {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+
+</body>
+</html>
