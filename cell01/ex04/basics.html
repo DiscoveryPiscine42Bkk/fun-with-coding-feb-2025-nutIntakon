@@ -7,6 +7,15 @@
             h1 {font-size: 100px; text-align: center; color: white;}
             body {background-color: pink;}
             p {font-style: italic; font-family: monospace; font-size: 20px;line-height: 35%; text-align: right; color: white;}
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                margin: 20px 0;
+            }
+            .container1,.container2 {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -14,16 +23,20 @@
             <button type="button" onclick="alert('This is navigator tab')">Basics</button>
         </div>
         <h1>Pink ? what&apos;s wrong with pink ?</h1>
-        <p style="text-align: center;">
-            <a href="https://www.tops.co.th/th/hikari-junsei-shinshu-miso-400g-4902663007531">
+
+        <div class="container">
+            <div class="container1">
                 <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQrQKYiMTLwaWseBvWMwH7JDtLXcnIaZ_uyqdDSdLxeuqncKlNrYb2zVPT6YqbVjGyLUOjaqirr7SKNJX2UoeScAEg01pTa_jo0LA9E09CXpogRbB0DTIAI&usqp=CAE" height="400">
-            </a>
-            <a href="https://www.nike.com/th/t/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-jordan-one-take-5-pf-jNx9SV/FD2336-104">
+                <p style="text-align: center;"><a href="https://www.tops.co.th/th/hikari-junsei-shinshu-miso-400g-4902663007531">hikari</a></p>
+            </div>
+            <div class="container2">
                 <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRAtw_sMUNYEcTEGTrxAWPGQGrvWU5helUiNdr-QVGfkA2KLE3wljgSTPMXG-sumn4T2uC1Yi1Fgwd53BFG3Ei7W5-6mYq5HiSu3KhDHDGcw7gSxvbSbY5n&usqp=CAE" height="400">
-            </a>
+                <p style="text-align: center;"><a href="https://www.nike.com/th/t/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-jordan-one-take-5-pf-jNx9SV/FD2336-104">nike</a></p>
+            </div>
+        </div>
+        <p style="text-align: center;">
             <hr width="100%" size="3" color="palevioletred">
             <p>“© nintakon 2025</p>
         </p>
-        
     </body>
 </html>
